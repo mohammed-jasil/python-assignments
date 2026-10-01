@@ -1,0 +1,278 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "3f760b04-b8c5-4cfb-ae6a-21d6da3b3bbe",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "age_list: [24, 25, 26, 27, 28]\n",
+      "name_list: ['Zara', 'Jasil', 'Rahul', 'Anjali', 'Arun']\n"
+     ]
+    }
+   ],
+   "source": [
+    "age_list = [24, 25, 26, 27, 28]\n",
+    "name_list = [\"Zara\", \"Jasil\", \"Rahul\", \"Anjali\", \"Arun\"] \n",
+    "print(\"age_list:\", age_list)\n",
+    "print(\"name_list:\", name_list)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "433e0474-fd32-40e9-bba0-49cc8532fb8f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "a. After append: ['Zara', 'Jasil', 'Rahul', 'Anjali', 'Arun', 'Yazhini']\n",
+      "b. After insert: [24, 25, 30, 30, 26, 27]\n",
+      "c. After remove: ['Zara', 'Jasil', 'Rahul', 'Anjali', 'Arun']\n",
+      "d. After pop: [24, 25, 30, 30, 26]\n",
+      "e. After extend: [24, 25, 30, 30, 26, 29, 30, 26]\n",
+      "f. sorted descending: [30, 30, 30, 29, 26, 26, 25, 24]\n",
+      "g. Max age: 30\n",
+      " Min age: 24\n",
+      " Sum of age: 220\n"
+     ]
+    }
+   ],
+   "source": [
+    "name_list.append(\"Yazhini\")\n",
+    "print(\"a. After append:\", name_list)\n",
+    "age_list.insert(2, 30)\n",
+    "print(\"b. After insert:\", age_list)\n",
+    "name_list.remove(\"Yazhini\")\n",
+    "print(\"c. After remove:\", name_list)\n",
+    "age_list.pop()\n",
+    "print(\"d. After pop:\", age_list)\n",
+    "age_list.extend([29, 30, 26])\n",
+    "print(\"e. After extend:\", age_list)\n",
+    "age_list.sort(reverse=True)\n",
+    "print(\"f. sorted descending:\", age_list)\n",
+    "print(\"g. Max age:\", max(age_list))\n",
+    "print(\" Min age:\", min(age_list))\n",
+    "print(\" Sum of age:\", sum(age_list))      "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "de50596e-b0f2-43ab-8ed9-1ccfb9a6aacd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "a. First element: Zara\n",
+      "b. Last element: Arun\n",
+      "c.Index 2 to 4: ['Rahul', 'Anjali', 'Arun']\n",
+      "d. reverse order: ['Arun', 'Anjali', 'Rahul', 'Jasil', 'Zara']\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"a. First element:\", name_list[0])\n",
+    "print(\"b. Last element:\", name_list[-1])\n",
+    "print(\"c.Index 2 to 4:\", name_list[2:5])\n",
+    "print(\"d. reverse order:\", name_list[::-1])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "aaf9f174-1b0b-4a95-a352-14ad8042e5ac",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "a. Initial dictionary: {'Zara': 85, 'Jasil': 90, 'Rahul': 75, 'Anjali': 88, 'Arun': 92}\n",
+      "b. Mark of Jasil: 90\n",
+      "c. After adding Janani: {'Zara': 85, 'Jasil': 90, 'Rahul': 75, 'Anjali': 88, 'Arun': 92, 'Janani': 80}\n",
+      "d. After updating Zara's marks: {'Zara': 82, 'Jasil': 90, 'Rahul': 75, 'Anjali': 88, 'Arun': 92, 'Janani': 80}\n"
+     ]
+    }
+   ],
+   "source": [
+    "student_marks = {\n",
+    "    \"Zara\": 85,\n",
+    "    \"Jasil\": 90,\n",
+    "    \"Rahul\": 75,\n",
+    "    \"Anjali\": 88,\n",
+    "    \"Arun\": 92,\n",
+    "}\n",
+    "print(\"a. Initial dictionary:\", student_marks)\n",
+    "print(\"b. Mark of Jasil:\", student_marks[\"Jasil\"])\n",
+    "student_marks[\"Janani\"] = 80\n",
+    "print(\"c. After adding Janani:\", student_marks)\n",
+    "student_marks[\"Zara\"] = 82\n",
+    "print(\"d. After updating Zara's marks:\", student_marks) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "85e5e55c-b6c0-404e-a6c4-6ce16cf2b51e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Keys: dict_keys(['Zara', 'Jasil', 'Rahul', 'Anjali', 'Arun', 'Janani'])\n",
+      "values: dict_values([82, 90, 75, 88, 92, 80])\n",
+      "key-value pairs: dict_items([('Zara', 82), ('Jasil', 90), ('Rahul', 75), ('Anjali', 88), ('Arun', 92), ('Janani', 80)])\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Keys:\", student_marks.keys())\n",
+    "print(\"values:\", student_marks.values())\n",
+    "print(\"key-value pairs:\", student_marks.items())\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "1822276f-c681-424a-ac8e-a5dca314dd99",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "a. my_set output : {'u', 'a', 'e', 'i', 'o'}\n",
+      "explanation: sets do not allow duplicate values, so repested elements ('a', 'i')are removed.\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_set = {'a', 'e', 'i', 'o', 'u', 'a', 'a', 'i'}\n",
+    "print(\"a. my_set output :\", my_set)\n",
+    "print(\"explanation: sets do not allow duplicate values, so repested elements ('a', 'i')are removed.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "b2d877d7-0408-4468-8f23-663897874064",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "b. Error: 'set' object does not support item assignment\n",
+      "Explanation: sets are unordered and unindexed, so elements cannot be changed using index.\n"
+     ]
+    }
+   ],
+   "source": [
+    "try:\n",
+    "    my_set[4] = 's'\n",
+    "except TypeError as e:\n",
+    "    print(\"\\nb. Error:\", e)\n",
+    "    print(\"Explanation: sets are unordered and unindexed, so elements cannot be changed using index.\")\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "924feca1-7cc0-4857-a650-efa2a8a50aaf",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "c. set1: {1, 3, 5, 7, 9}\n",
+      "   set2: {2, 3, 5, 8, 10}\n",
+      "d. Union: {1, 2, 3, 5, 7, 8, 9, 10}\n",
+      "   Intersection: {3, 5}\n"
+     ]
+    }
+   ],
+   "source": [
+    "set1 = {1, 3, 5, 7, 9}\n",
+    "set2 = {2, 3, 5, 8, 10}\n",
+    "print(\"\\nc. set1:\", set1)\n",
+    "print(\"   set2:\", set2)\n",
+    "print(\"d. Union:\", set1.union(set2))\n",
+    "print(\"   Intersection:\", set1.intersection(set2))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "7a49aaeb-e87d-43a5-9aa6-2e34dc166dac",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter your score (0 to 10):  7\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Average: Good effort! Keep practicing, there's room for improvement,\n"
+     ]
+    }
+   ],
+   "source": [
+    "score = float(input(\"Enter your score (0 to 10): \"))\n",
+    "if score > 7:\n",
+    "    print(\"Above Average: Excellent performance! Keep up the great work.\")\n",
+    "elif 4 <= score <= 7:\n",
+    "    print(\"Average: Good effort! Keep practicing, there's room for improvement,\")\n",
+    "else:\n",
+    "    print(\"Below Aerage: Need to improve yout perfomance, consistent practice will lead to better results.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b76d582c-a121-440e-8523-e2bba415c331",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.14.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
